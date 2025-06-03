@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jury Member Registration</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>JURY MEMBER REGISTRATION FORM</h2>
+    <form class="form" onsubmit="return validateJuryForm()">
+      <input type="text" id="jury-name" placeholder="Name of Jury Member" required />
+      <input type="text" id="jury-designation" placeholder="Designation" required />
+      <input type="text" id="jury-org" placeholder="Organization" required />
+      <input type="email" id="jury-email" placeholder="Email ID" required />
+      <input type="tel" id="jury-phone" placeholder="Phone Number" pattern="[0-9]{10}" required />
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    function validateJuryForm() {
+      const phone = document.getElementById("jury-phone").value;
+      if (!/^\d{10}$/.test(phone)) {
+        alert("Phone number must be 10 digits");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+</html>

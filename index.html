@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="assets/stylesheets/navbar.css">
 
     <!-- Internet Stylesheet Imports -->
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet"
@@ -22,13 +21,13 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="./assets/images/gov_ind.png" alt=""
+                <img src="./assets/images/gov_ind.png" alt="Government of India Logo"
                     style="height: 70px; vertical-align: middle; object-fit: contain; margin-right: 10px; padding-left:30px">
                 <span style="height: 65px; border-left: 2px solid white; margin: 0 15px;"></span>
-                <img src="./assets/images/namami_gange.png" alt=""
+                <img src="./assets/images/namami_gange.png" alt="Namami Gange Logo"
                     style="height: 50px; vertical-align: middle; object-fit: contain; margin-right: 10px; padding-left:30px;">
                 <span style="height: 65px; border-left: 2px solid white; margin: 0 15px;"></span>
-                <img src="./assets/images/riverathon_logo.png" alt=""
+                <img src="./assets/images/riverathon_logo.png" alt="Riverathon Logo"
                     style="height: 60px; vertical-align: middle; object-fit: contain; padding-left:30px;">
             </a>
 
@@ -49,12 +48,9 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#what">About Riverathon</a></li>
-                            <hr class="dropdown-divider">
-
+                            <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="about/about-nmgc.html">About NMGC</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
+                            <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="about/about-amity.html">About Amity University</a></li>
                         </ul>
                     </li>
@@ -67,34 +63,35 @@
                             Important Links
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="important-links/important-dates.html">Timeline</a>
-                            </li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="important-links/guidelines.html">Rules & Guidelines</a>
-                            </li>
-                            <hr class="dropdown-divider">
+                            <li><a class="dropdown-item" href="important-links/important-dates.html">Timeline</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="important-links/guidelines.html">Rules & Guidelines</a></li>
+                        </ul>
                     </li>
-                </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="register.html"><button id="registerNavBtn">Register Now!</button></a>
-                </li>
+                    <li class="nav-item">
+                        <a href="register.html"><button id="registerNavBtn" aria-label="Register Now">Register Now!</button></a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
     <div class="marquee">
-        <marquee loop="true" direction="left" scrollamount="15">
-            <div class="marq">
-                <img src="https://www.sih.gov.in/img1/slider/new.gif" alt="">
-                <p>Registrations opening soon! Watch out!</p>
-            </div>
-        </marquee>
+        <div class="marq" style="display: flex; align-items: center; gap: 10px; animation: marquee 15s linear infinite;">
+            <img src="https://www.sih.gov.in/img1/slider/new.gif" alt="New">
+            <p style="margin: 0;">Registrations opening soon! Watch out!</p>
+        </div>
+        <style>
+            @keyframes marquee {
+                0% { transform: translateX(100%);}
+                100% { transform: translateX(-100%);}
+            }
+            .marquee .marq {
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        </style>
     </div>
-    <button onclick="topFunction()" id="myBtn" title="Go to top">&uarr;</button>
-    </p>
+    <button onclick="topFunction()" id="myBtn" title="Go to top" aria-label="Go to top">&uarr;</button>
 
     <div class="container text-center my-5"
         style="padding: 50px 30px; background: linear-gradient(135deg, #f5f7fa 0%, #d7dee4 100%); border-radius: 20px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); max-width: 800px; margin: auto;">
@@ -130,16 +127,15 @@
                 to you by Amity School of
                 Engineering & Technology in collaboration with National Mission for Clean Ganga aims to bring together
                 innovative minds to develop solutions integrating emerging technologies with LiDaR technology for
-                conservation, preservation & rejuvenation of our rivers.</h3>
+                conservation, preservation & rejuvenation of our rivers.</h4>
                 <div class="paragraphTextBtn">
-                    <p></p>
                     <div class="paragraphBtn">
-                        <a href="#why"><button id="btn-1">Explore More</button></a>
-                        <a href="#organizer"><button id="btn-2">Organizers</button></a>
+                        <a href="#why-riverathon"><button id="btn-1" aria-label="Explore More">Explore More</button></a>
+                        <a href="#organizer-jic"><button id="btn-2" aria-label="Organizers">Organizers</button></a>
                     </div>
                 </div>
                 <div class="arrowDwnImg">
-                    <img loading="lazy" src="assets/images/arrowDown.png" alt="">
+                    <img loading="lazy" src="assets/images/arrowDown.png" alt="Arrow Down">
                 </div>
         </div>
     </div>
@@ -147,7 +143,7 @@
         <h1 class="whatRiverathon">
             What is Riverathon 1.0?
         </h1>
-        <p class="whyRiverathon" id="why" style="text-align: justify;">
+        <p class="whyRiverathon" id="why-riverathon" style="text-align: justify;">
             Join a dynamic community of river enthusiasts - including students, researchers, and technologists - united
             by a common goal: to tackle the pressing challenges facing our rivers. Through the use of advanced LiDAR
             technology, Riverathon invites participants to map, analyze, and craft forward-thinking solutions aimed at
@@ -168,8 +164,6 @@
             Goals. By participating, you’re not just competing - you’re contributing to water conservation, climate
             resilience, and the revival of our ecosystems.
         </p>
-
-
     </div>
     <div class="themes" id="themes">
         <h1>Themes</h1>
@@ -177,7 +171,7 @@
         <div class="owl-carousel owl-theme container">
             <div class="item">
                 <div class="themeBox">
-                    <img src="./assets/images/whyRiverathon/theme-1.png" alt="">
+                    <img src="./assets/images/whyRiverathon/theme-1.png" alt="Floodplain Restoration">
                     <h1>Floodplain Restoration</h1>
                     <p>Using LiDAR to understand flood dynamics and propose strategies to restore natural floodplains.
                     </p>
@@ -185,21 +179,21 @@
             </div>
             <div class="item">
                 <div class="themeBox">
-                    <img src="./assets/images/whyRiverathon/theme-2.png" alt="">
+                    <img src="./assets/images/whyRiverathon/theme-2.png" alt="Sediment Management">
                     <h1>Sediment Management</h1>
                     <p>Identifying sediment deposition and erosion patterns for effective riverbed and riverbank.</p>
                 </div>
             </div>
             <div class="item">
                 <div class="themeBox">
-                    <img src="./assets/images/whyRiverathon/theme-3.png" alt="">
+                    <img src="./assets/images/whyRiverathon/theme-3.png" alt="Biodiversity Mapping">
                     <h1>Biodiversity Mapping</h1>
                     <p>Leveraging LiDAR to analyze riparian zones and support biodiversity conservation initiatives.</p>
                 </div>
             </div>
             <div class="item">
                 <div class="themeBox">
-                    <img src="./assets/images/whyRiverathon/theme-4.png" alt="">
+                    <img src="./assets/images/whyRiverathon/theme-4.png" alt="Disaster Management">
                     <h1>Disaster Management</h1>
                     <p>Developing early warning systems for floods, landslides, and other river-related natural
                         disasters.</p>
@@ -207,7 +201,7 @@
             </div>
             <div class="item">
                 <div class="themeBox">
-                    <img src="./assets/images/whyRiverathon/theme-5.png" alt="">
+                    <img src="./assets/images/whyRiverathon/theme-5.png" alt="Riparian Zone/Vegetation Analysis">
                     <h1>Riparian Zone/Vegetation Analysis</h1>
                     <p>Analyze riparian vegetation dynamics, assess ecological health, and develop strategies for
                         riparian zone restoration and management.</p>
@@ -215,7 +209,7 @@
             </div>
             <div class="item">
                 <div class="themeBox">
-                    <img src="./assets/images/whyRiverathon/theme-6.png" alt="">
+                    <img src="./assets/images/whyRiverathon/theme-6.png" alt="River Neighborhood Infrastructure Mapping">
                     <h1>River Neighborhood Infrastructure Mapping</h1>
                     <p>Identify vulnerabilities in critical infrastructure, assess flood risks, and develop strategies.
                     </p>
@@ -223,7 +217,7 @@
             </div>
             <div class="item">
                 <div class="themeBox">
-                    <img src="./assets/images/whyRiverathon/theme-7.png" alt="">
+                    <img src="./assets/images/whyRiverathon/theme-7.png" alt="Digital Twin for Urban-River Interaction">
                     <h1>Digital Twin for Urban-River Interaction</h1>
                     <p>Create virtual representations of urban-river systems to improve understanding and management.
                     </p>
@@ -231,7 +225,7 @@
             </div>
             <div class="item">
                 <div class="themeBox">
-                    <img src="./assets/images/whyRiverathon/theme-8.png" alt="">
+                    <img src="./assets/images/whyRiverathon/theme-8.png" alt="Climate and Environmental Monitoring">
                     <h1>Climate and Environmental Monitoring</h1>
                     <p>Track the impacts of climate change on river ecosystems and develop adaptation strategies.</p>
                 </div>
@@ -242,7 +236,7 @@
         <h1 class="whatRiverathon">
             TARGET AUDIENCE
         </h1>
-        <p class="whyRiverathon" id="why" style="text-align: justify;">
+        <p class="whyRiverathon" id="why-audience" style="text-align: justify;">
             Riverathon welcomes participation from students, researchers, and innovators who are deeply committed to
             environmental sustainability, technological innovation, and impactful problem-solving.
             <br><br>
@@ -260,28 +254,28 @@
         <h1 class="title">WHY RIVERATHON IS IMPORTANT FOR NATIONAL MISSION FOR CLEAN GANGA AND AMITY UNIVERSITY</h1>
         <div class="gridWhyPerks">
             <div class="perkBox">
-                <img loading="lazy" src="assets/images/whyRiverathon/why-1.png" alt="">
+                <img loading="lazy" src="assets/images/whyRiverathon/why-1.png" alt="Cutting-Edge Research & Innovation">
                 <h3>Cutting-Edge Research <br>
                     & Innovation</h3>
             </div>
             <div class="perkBox">
-                <img loading="lazy" src="assets/images/whyRiverathon/why-2.png" alt="">
+                <img loading="lazy" src="assets/images/whyRiverathon/why-2.png" alt="Skill Development & Industry Collaboration">
                 <h3>Skill Development <br>
                     & Industry Collaboration</h3>
             </div>
             <div class="perkBox">
-                <img loading="lazy" src="assets/images/whyRiverathon/why-3.png" alt="">
+                <img loading="lazy" src="assets/images/whyRiverathon/why-3.png" alt="Addressing Critical Environmental Challenges">
                 <h3>Addressing Critical <br>
                     Environmental Challenges</h3>
             </div>
         </div>
     </div>
-    <div class="organizerPage" id="organizer">
+    <div class="organizerPage" id="organizer-jic">
         <div class="py-5 team4">
             <div class="container">
                 <div class="row justify-content-center mb-4">
                     <div class="col-md-7 text-center">
-                        <h1 class="mb-3">joint interface committee</h1>
+                        <h1 class="mb-3">Joint Interface Committee</h1>
                         <h6 class="subtitle"></h6>
                     </div>
                 </div>
@@ -291,7 +285,7 @@
                             <div class="col-md-12 orgImage">
                                 <img loading="lazy"
                                     src="https://pbs.twimg.com/media/F_g_5rqagAARkZ5?format=jpg&name=medium"
-                                    alt="wrapkit" class="img-fluid rounded-circle" />
+                                    alt="Sh. Nalin Srivastava" class="img-fluid rounded-circle" />
                             </div>
                             <div class="col-md-12 text-center">
                                 <div class="pt-2">
@@ -299,8 +293,6 @@
                                     <h6 style="font-weight: 400; color: #6c757d;" class="subtitle mb-3">Sh. Nalin
                                         Srivastava,<br>Deputy Director General, NMCG</h6>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
@@ -308,7 +300,7 @@
                         <div class="row">
                             <div class="col-md-12 orgImage">
                                 <img loading="lazy" src="https://pbs.twimg.com/media/FkEzzCnVQAAhLfE.jpg:large"
-                                    alt="wrapkit" class="img-fluid rounded-circle" />
+                                    alt="Sh. Dheeraj Joshi" class="img-fluid rounded-circle" />
                             </div>
                             <div class="col-md-12 text-center">
                                 <div class="pt-2">
@@ -316,14 +308,13 @@
                                     <h6 style="font-weight: 400; color: #6c757d; font-size: 0.9rem;"
                                         class="subtitle mb-3">Sh. Dheeraj Joshi,<br> Director,<br> NMCG</h6>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 mb-4">
                         <div class="row">
                             <div class="col-md-12 orgImage">
-                                <img loading="lazy" src="assets/images/organising-committee/neeraj.jpeg" alt="wrapkit"
+                                <img loading="lazy" src="assets/images/organising-committee/neeraj.jpeg" alt="Sh. Neeraj Gurjar"
                                     class="img-fluid rounded-circle" />
                             </div>
                             <div class="col-md-12 text-center">
@@ -333,14 +324,13 @@
                                         class="subtitle mb-3">Sh. Neeraj Gurjar,<br>Director,<br>Geodetic & Research
                                         Branch, Survey of India</h6>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 mb-4">
                         <div class="row">
                             <div class="col-md-12 orgImage">
-                                <img loading="lazy" src="assets/images/organising-committee/mathuria.jpg" alt="wrapkit"
+                                <img loading="lazy" src="assets/images/organising-committee/mathuria.jpg" alt="Sh. D. P. Mathuria"
                                     class="img-fluid rounded-circle" />
                             </div>
                             <div class="col-md-12 text-center">
@@ -349,18 +339,15 @@
                                     <h6 style="font-weight: 400; color: #6c757d;" class="subtitle mb-3">Sh. D. P.
                                         Mathuria,<br> Chief Engineer,<br> P&DO, Central Water Commission</h6>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
-
-
                 <div class="row">
                     <div class="col-lg-3 mb-4">
                         <div class="row">
                             <div class="col-md-12 orgImage">
-                                <img loading="lazy" src="https://home.iitk.ac.in/~rsinha/img/R_Sinha.jpeg" alt="wrapkit"
+                                <img loading="lazy" src="https://home.iitk.ac.in/~rsinha/img/R_Sinha.jpeg" alt="Prof. Rajiv Sinha"
                                     class="img-fluid rounded-circle" />
                             </div>
                             <div class="col-md-12 text-center">
@@ -370,7 +357,6 @@
                                         class="subtitle mb-3">Prof. Rajiv Sinha,<br>Professor,<br> Department of Earth
                                         Sciences, IIT Kanpur</h6>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -378,7 +364,7 @@
                         <div class="row">
                             <div class="col-md-12 orgImage">
                                 <img loading="lazy" src="https://www.iirs.gov.in/iirs/sites/default/files/vabhav.jpg"
-                                    alt="wrapkit" class="img-fluid rounded-circle" />
+                                    alt="Dr. Vaibhav Garg" class="img-fluid rounded-circle" />
                             </div>
                             <div class="col-md-12 text-center">
                                 <div class="pt-2">
@@ -387,7 +373,6 @@
                                         class="subtitle mb-3">Dr. Vaibhav Garg,<br>Scientist F,<br> Water Resource
                                         Department, Indian Institute of Remote Sensing/ISRO, Dehradun</h6>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -396,7 +381,7 @@
                             <div class="col-md-12 orgImage">
                                 <img loading="lazy"
                                     src="https://iitbhu.ac.in/sites/default/files/styles/medium/public/pictures/2022-11/Anurag%20Ohri%20Photo.jpg?itok=O-7viWaJ"
-                                    alt="wrapkit" class="img-fluid rounded-circle" />
+                                    alt="Prof. Anurag Ohri" class="img-fluid rounded-circle" />
                             </div>
                             <div class="col-md-12 text-center">
                                 <div class="pt-2">
@@ -405,7 +390,6 @@
                                         class="subtitle mb-3">Prof. Anurag Ohri,<br>Professor,<br>Department of Civil
                                         Engineering, IIT (BHU)</h6>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -414,7 +398,7 @@
                             <div class="col-md-12 orgImage">
                                 <img loading="lazy"
                                     src="https://hydrosense.iitd.ac.in/wp-content/uploads/Manab-scaled-e1685262459278-915x1024.jpg"
-                                    alt="wrapkit" class="img-fluid rounded-circle" />
+                                    alt="Assoc. Prof. Manabendra Saharia" class="img-fluid rounded-circle" />
                             </div>
                             <div class="col-md-12 text-center">
                                 <div class="pt-2">
@@ -423,7 +407,6 @@
                                         class="subtitle mb-3">Assoc. Prof. Manabendra Saharia,<br>Associate
                                         Professor,<br>Department of Civil Engineering, IIT Delhi</h6>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -431,7 +414,7 @@
                         <div class="row">
                             <div class="col-md-12 orgImage">
                                 <img loading="lazy" src="https://jnu.irins.org/assets/profile_images/56643.jpg"
-                                    alt="wrapkit" class="img-fluid rounded-circle" />
+                                    alt="Prof. Saumitra Mukherjee" class="img-fluid rounded-circle" />
                             </div>
                             <div class="col-md-12 text-center">
                                 <div class="pt-2">
@@ -441,7 +424,6 @@
                                         of Environmental Sciences, JNU / Director, New Environment and Energy Research
                                         (NEER)</h6>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -450,16 +432,15 @@
                             <div class="col-md-12 orgImage">
                                 <img loading="lazy"
                                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgI7c5nAqiTx45eJp3cIUhzLdMEesti9gkCA&s"
-                                    alt="wrapkit" class="img-fluid rounded-circle" />
+                                    alt="Sh. Peeyush Gupta" class="img-fluid rounded-circle" />
                             </div>
                             <div class="col-md-12 text-center">
                                 <div class="pt-2">
                                     <h5 style="font-weight: 900; color: rgb(0, 36, 73);" class="mt-4 mb-0">Member
                                         Secretary</h5>
                                     <h6 style="font-weight: 400; color: #6c757d; font-size: 0.9rem;"
-                                        class="subtitle mb-3">Sh. Peeyush Gupta,<br>RTIS,<r> NMCG</h6>
+                                        class="subtitle mb-3">Sh. Peeyush Gupta,<br>RTIS, NMCG</h6>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -467,7 +448,7 @@
             </div>
         </div>
     </div>
-    <div class="organizerPage" id="organizer">
+    <div class="organizerPage" id="organizer-oc">
         <div class="py-5 team4">
             <div class="container">
                 <div class="row justify-content-center mb-4">
@@ -483,7 +464,7 @@
                             <div class="col-md-12 orgImage">
                                 <img loading="lazy"
                                     src="https://pbs.twimg.com/profile_images/1253001810912002048/9xNHe672_400x400.jpg"
-                                    alt="wrapkit" class="img-fluid rounded-circle" />
+                                    alt="Prof. Manoj Kr. Pandey" class="img-fluid rounded-circle" />
                             </div>
                             <div class="col-md-12 text-center">
                                 <div class="pt-2">
@@ -492,7 +473,6 @@
                                         class="subtitle mb-3">Prof. Manoj Kr. Pandey,<br>Director,<br> Amity School of
                                         Engineering and Technology, Noida</h6>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -501,7 +481,7 @@
                             <div class="col-md-12 orgImage">
                                 <img loading="lazy"
                                     src="https://img.amizone.net/AzureFileHandler.ashx?FileName=amizonefiles/facultyprofile/5101.jpeg"
-                                    alt="wrapkit" class="img-fluid rounded-circle" />
+                                    alt="Prof. Madhuri Kumari" class="img-fluid rounded-circle" />
                             </div>
                             <div class="col-md-12 text-center">
                                 <div class="pt-2">
@@ -510,7 +490,6 @@
                                         class="subtitle mb-3">Prof. Madhuri Kumari,<br>Professor,<br> Department of
                                         Civil Engineering, Amity School of Engineering and Technology, Noida</h6>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -529,9 +508,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script>
-
     $(document).ready(function () {
-
         $('.owl-carousel').owlCarousel({
             loop: true,
             margin: 10,
@@ -539,7 +516,6 @@
             autoplayTimeout: 1000,
             autoplayHoverPause: true,
             responsiveClass: true,
-            margin: 10,
             responsive: {
                 0: {
                     items: 1
@@ -551,11 +527,9 @@
                     items: 3
                 }
             }
-        })
+        });
         $(".owl-prev").html('<i class="fa fa-chevron-left"></i>');
         $(".owl-next").html('<i class="fa fa-chevron-right"></i>');
-
     });
 </script>
-
 </html>

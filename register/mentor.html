@@ -70,27 +70,62 @@
     </nav>
   <div class="container">
     <h2>MENTOR REGISTRATION</h2>
-    <form class="form" onsubmit="return validateMentorForm()" action="thankyou.html" method="get">
-      <input type="text" id="mentor-name" placeholder="Name of Jury Member" required />
-      <input type="text" id="mentor-designation" placeholder="Designation" required />
-      <input type="text" id="mentor-org" placeholder="Organization" required />
-      <input type="email" id="mentor-email" placeholder="Email ID" required />
-      <input type="tel" id="mentor-phone" placeholder="Phone Number" pattern="[0-9]{10}" required />
-      <input type="text" id="mentor-area" placeholder="Area of Mentoring" required />
-      <button type="submit">Submit</button>
-    </form>
-  </div>
+    <form id="mentors" class="form">
+  <input type="text" id="name" name="Name" placeholder="Name of Mentor" required />
+  <input type="text" id="designation" name="Designation" placeholder="Designation" required />
+  <input type="text" id="organization" name="Organization" placeholder="Organization" required />
+  <input type="email" id="email" name="Email" placeholder="Email ID" required />
+  <input type="tel" id="phone" name="Phone" placeholder="Phone Number" required />
+  <input type="text" id="area" name="AreaOfMentoring" placeholder="Area of Mentoring" required />
+  <button type="submit">Submit</button>
+</form>
 
-  <script>
-    function validateMentorForm() {
-      const phone = document.getElementById("mentor-phone").value;
-      if (!/^\d{10}$/.test(phone)) {
-        alert("Phone number must be 10 digits");
-        return false;
-      }
-      return true;
-    }
-  </script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyhhiYtIMRje-RFPoNOagr0xwak49-Ygoef64EOMLYgWywIXo9RMeO2wnzB-iRN3TMd/exec';
+
+  function validateMentorForm() {
+    const name = document.getElementById("name").value.trim();
+    const designation = document.getElementById("designation").value.trim();
+    const org = document.getElementById("organization").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const area = document.getElementById("area").value.trim();
+
+    // Name, Designation, Org, Area: not empty
+    if (!name) return alert("Please enter your name.");
+    if (!designation) return alert("Please enter your designation.");
+    if (!org) return alert("Please enter your organization.");
+    if (!area) return alert("Please enter your area of mentoring.");
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) return alert("Please enter a valid email.");
+
+    // Phone validation: exactly 10 digits
+    if (!/^\d{10}$/.test(phone)) return alert("Phone number must be exactly 10 digits.");
+
+    return true;
+  }
+
+  document.getElementById('mentor-form').addEventListener('submit', e => {
+    e.preventDefault();
+
+    if (!validateMentorForm()) return;
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch(scriptURL, { method: 'POST', body: formData })
+      .then(response => {
+        if (response.ok) {
+          window.location.href = "thankyou.html";
+        } else {
+          alert("Submission failed. Please try again.");
+        }
+      })
+      .catch(() => alert("Submission failed. Please try again."));
+  });
+</script>
 </body>
 <!-- JavaScript Imports -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

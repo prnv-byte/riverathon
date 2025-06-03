@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riverathon</title>
+    <script src="https://kit.fontawesome.com/03e9286989.js" crossorigin="anonymous"></script>
+
+    <!-- Local Stylesheet Imports -->
+    <link rel="stylesheet" href="assets/stylesheets/index.css">
+    <link rel="stylesheet" href="assets/stylesheets/navbar.css">
+
+    <!-- Internet Stylesheet Imports -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+</head>
+<style>
+    .navbar-toggler {
+        border-color: white !important;
+    }
+
+    .orgImage img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid #ddd;
+    }
+
+    /* Style for the name */
+    .name {
+        font-weight: 700;
+        /* Bold but not too heavy */
+        color: darkblue;
+        /* Set dark blue color */
+        font-family: inherit;
+        /* Maintain the existing font style */
+    }
+
+    /* Style for the designation */
+    .designation {
+        font-weight: 400;
+        /* Normal font weight */
+        color: inherit;
+        /* Keep the default color (or adjust if needed) */
+        font-family: inherit;
+        /* Maintain the existing font style */
+    }
+</style>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./assets/images/gov_ind.png" alt=""
+                    style="height: 70px; vertical-align: middle; object-fit: contain; margin-right: 10px; padding-left:30px">
+                <span style="height: 65px; border-left: 2px solid white; margin: 0 15px;"></span>
+                <img src="./assets/images/namami_gange.png" alt=""
+                    style="height: 50px; vertical-align: middle; object-fit: contain; margin-right: 10px; padding-left:30px;">
+                <span style="height: 65px; border-left: 2px solid white; margin: 0 15px;"></span>
+                <img src="./assets/images/riverathon_logo.png" alt=""
+                    style="height: 60px; vertical-align: middle; object-fit: contain; padding-left:30px;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            About
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#what">About Riverathon</a></li>
+                            <hr class="dropdown-divider">
+
+                            <li><a class="dropdown-item" href="about/about-nmgc.html">About NMGC</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="about/about-amity.html">About Amity University</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Activities
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="workshop.html">Workshop</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#"
+                                    onclick="alert('Page is currently under development. Coming soon.')">Link 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#themes">Problem Themes</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Important Links
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="important-dates.html">Timeline</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="./guidelines.html">Rules & Guidelines</a></li>
+                            <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#"
+                            onclick="alert('Page is currently under development. Coming soon.')">FAQs</a></li>
+
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#"
+                            onclick="alert('Page is currently under development. Coming soon.')">Contact Us</a></li>
+                </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="register.html"><button id="registerNavBtn">Register Now!</button></a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Riverathon-initial-landing -->
+    <!-- <div class="container landPage">
+    <div class="titleText">
+        <h1>A National-Level Hackathon "Riverathon"</h1>
+        <h3>(Innovate to Revive, Restore, Rejuvenate River)</h3>
+    </div>
+    <div class="paragraphTextBtn">
+        <p>A National Mission of Clean Ganga (NMCG) – led Sustainable Development Initiative
+            under
+            “Namami Gange Programme”
+        </p>
+        <div class="paragraphBtn">
+            <a href="#what"><button id="btn-1">About Riverathon</button></a>
+            <a href="./register.html"><button id="btn-2">Register Now</button></a>
+        </div>
+    </div>
+    <div class="arrowDwnImg">
+        <img loading="lazy" src="assets/images/arrowDown.png" alt="">
+    </div>
+</div> -->
+    <!-- announcement slider carousel -->
+
+    <!-- <div id="carouselExampleControls" style="border-top: 2px solid white;border-bottom: 2px solid white;"
+        data-bs-interval="1800" class="carousel slide" data-bs-ride="carousel" style="max-width: 100%; margin: auto;">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/images/backgroundCaraousel/image-1.png" class="d-block w-100"
+                    style="height: 60%; object-fit: cover;" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/backgroundCaraousel/image-2.png" class="d-block w-100"
+                    style="height: 60%; object-fit: cover;" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/backgroundCaraousel/image-3.png" class="d-block w-100"
+                    style="height: 60%; object-fit: cover;" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/backgroundCaraousel/image-4.png" class="d-block w-100"
+                    style="height: 60%; object-fit: cover;" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/backgroundCaraousel/image-5.png" class="d-block w-100"
+                    style="height: 60%; object-fit: cover;" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/backgroundCaraousel/image-6.png" class="d-block w-100"
+                    style="height: 60%; object-fit: cover;" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/backgroundCaraousel/image-7.png" class="d-block w-100"
+                    style="height: 60%; object-fit: cover;" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/backgroundCaraousel/image-8.png" class="d-block w-100"
+                    style="height: 60%; object-fit: cover;" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/backgroundCaraousel/image-9.png" class="d-block w-100"
+                    style="height: 60%; object-fit: cover;" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/backgroundCaraousel/image-10.png" class="d-block w-100"
+                    style="height: 60%; object-fit: cover;" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/backgroundCaraousel/image-11.png" class="d-block w-100"
+                    style="height: 60%; object-fit: cover;" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/backgroundCaraousel/image-12.png" class="d-block w-100"
+                    style="height: 60%; object-fit: cover;" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div> -->
+    <div class="marquee">
+        <marquee loop="true" direction="left" scrollamount="15">
+            <div class="marq">
+                <img src="https://www.sih.gov.in/img1/slider/new.gif" alt="">
+                <p>Registrations opening soon! Watch out!</p>
+            </div>
+        </marquee>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">&uarr;</button>
+    <!-- organized by amity -->
+    <!-- Row of 3 images with dividers -->
+    <!-- <div class="row text-white align-items-center justify-content-center flex-nowrap overflow-auto px-2"
+        style="padding-top: 40px;">
+        <div class="col-auto d-flex justify-content-center align-items-center px-2">
+            <img src="assets/images/gov.png" alt="Image 1" class="img-fluid" style="max-height: 60px; width: auto;" />
+        </div>
+        <div class="col-auto d-flex justify-content-center align-items-center px-2">
+            <div class="divider" style="border-left: 2px solid #ccc; height: 40px;"></div>
+        </div>
+        <div class="col-auto d-flex justify-content-center align-items-center px-2">
+            <img src="assets/images/nmgc.jpg" alt="Image 2" class="img-fluid" style="max-height: 60px; width: auto;" />
+        </div>
+        <div class="col-auto d-flex justify-content-center align-items-center px-2">
+            <div class="divider" style="border-left: 2px solid #ccc; height: 40px;"></div>
+        </div>
+        <div class="col-auto d-flex justify-content-center align-items-center px-2">
+            <img src="assets/images/riverathon.jpeg" alt="Image 3" class="img-fluid"
+                style="max-height: 60px; width: auto;" />
+        </div>
+    </div> -->
+    </p>
+
+    <div class="container text-center my-5"
+        style="padding: 50px 30px; background: linear-gradient(135deg, #f5f7fa 0%, #d7dee4 100%); border-radius: 20px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); max-width: 800px; margin: auto;">
+        <h2
+            style="color: rgb(0, 36, 73); font-weight: 700; font-size: 2.2rem; margin-bottom: 25px; letter-spacing: 1px;">
+            A National-Level Hackathon "Riverathon"
+        </h2>
+        <p class="mt-4"
+            style="color: #333; font-size: 1.15rem; line-height: 1.8; max-width: 700px; margin: auto; padding: 0 15px;">
+            <strong>(Innovate to Revive, Restore, Rejuvenate River)</strong><br>
+            A National Mission of Clean Ganga (NMCG) – led Sustainable Development Initiative under
+            <strong>“Namami Gange Programme”</strong>
+        </p>
+
+        <h2
+            style="color: rgb(0, 36, 73); font-weight: 700; font-size: 1.8rem; margin-top: 40px; margin-bottom: 25px; letter-spacing: 1px;">
+            Organized By
+        </h2>
+
+        <!-- <div class="mt-4">
+        <img src="./assets/images/amity-university9126.jpg" alt="Amity Logo"
+            style="max-width: 250px; width: 100%; height: auto; margin-bottom: 20px;">
+    </div> -->
+
+        <p class="mt-4"
+            style="color: #333; font-size: 1.8rem; line-height: 1.8; max-width: 700px; margin: auto; padding: 0 15px;">
+            <strong>Amity School of Engineering & Technology, Amity University Uttar Pradesh, Noida</strong><br>
+            <strong>Riverathon 2024</strong>
+        </p>
+    </div>
+
+
+    <!-- Landing Page -->
+    <!-- <div class="container landPage">
+        <div class="titleText">
+            <h1>Riverathon</h1>
+            <h3>Revive. Restore. Rejuvenate.</h3>
+        </div>
+        <div class="paragraphTextBtn">
+            <p>Revive, Restore & Rejuvenate river using LiDaR data. This hackathon brought to you by Amity School of
+                Engineering & Technology in collaboration with National Mission for Clean Ganga aims to bring together
+                innovative minds to develop solutions integrating emerging technologies with LiDaR technology for
+                conservation, preservation & rejuvenation of our rivers.</p>
+            <div class="paragraphBtn">
+                <a href="#why"><button id="btn-1">Explore More</button></a>
+                <a href="#organizer"><button id="btn-2">Organizers</button></a>
+            </div>
+        </div>
+        <div class="arrowDwnImg">
+            <img loading="lazy" src="assets/images/arrowDown.png" alt="">
+        </div>
+    </div> -->
+    <style>
+        .divider {
+            border-left: 2px solid #ccc;
+            height: 100px;
+        }
+
+        @media (max-width: 767px) {
+            .divider {
+                display: none;
+            }
+        }
+
+        .image-col img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+    <div class="container py-5">
+
+
+
+        <!-- Some paragraph/text lines -->
+        <div class="container landPage">
+            <div class="titleText">
+                <h1>Riverathon</h1>
+                <h3>Revive. Restore. Rejuvenate.</h3>
+            </div>
+            <h4 style="line-height: 35px; text-align: justify;">Revive, Restore & Rejuvenate river using LiDaR data.
+                This hackathon brought
+                to you by Amity School of
+                Engineering & Technology in collaboration with National Mission for Clean Ganga aims to bring together
+                innovative minds to develop solutions integrating emerging technologies with LiDaR technology for
+                conservation, preservation & rejuvenation of our rivers.</h3>
+                <div class="paragraphTextBtn">
+                    <p></p>
+                    <div class="paragraphBtn">
+                        <a href="#why"><button id="btn-1">Explore More</button></a>
+                        <a href="#organizer"><button id="btn-2">Organizers</button></a>
+                    </div>
+                </div>
+                <div class="arrowDwnImg">
+                    <img loading="lazy" src="assets/images/arrowDown.png" alt="">
+                </div>
+                <!-- <h4 class="text-center text-white">
+                    Organized by </h4> -->
+        </div>
+
+        <!-- Final image under everything -->
+        <!-- <div class="mt-5 text-center text-white">
+            <img src="assets/images/asetLogo.png" width="200px" alt="Bottom Image" class="img-fluid">
+        </div> -->
+    </div>
+    <!-- About Page -->
+    <div class="aboutPage" id="what">
+        <h1 class="whatRiverathon">
+            What is Riverathon 1.0?
+        </h1>
+        <p class="whyRiverathon" id="why" style="text-align: justify;">
+            Join a dynamic community of river enthusiasts - including students, researchers, and technologists - united
+            by a common goal: to tackle the pressing challenges facing our rivers. Through the use of advanced LiDAR
+            technology, Riverathon invites participants to map, analyze, and craft forward-thinking solutions aimed at
+            creating a healthier and more resilient river ecosystem. From flood prevention to biodiversity enhancement,
+            your ideas can make a lasting impact.
+            <br><br>
+            This is more than just a competition - it’s a movement. Riverathon offers a vibrant platform to collaborate
+            with like-minded innovators, sharpen your skills, and contribute to meaningful environmental change. It's
+            your opportunity to combine creativity with purpose and play an active role in shaping the future of river
+            conservation.
+            <br><br>
+            Riverathon 1.0, the flagship event under the Namami Gange Programme, is the first-ever hackathon dedicated
+            to rivers using LiDAR data provided by the Survey of India. It brings together diverse minds from
+            engineering, environmental science, data analytics, and innovation to reimagine the future of our rivers.
+            <br><br>
+            At its core, Riverathon promotes a multidisciplinary approach that blends cutting-edge technology with
+            policy insights and community engagement - all aligned with the United Nations’ Sustainable Development
+            Goals. By participating, you’re not just competing - you’re contributing to water conservation, climate
+            resilience, and the revival of our ecosystems.
+        </p>
+
+
+    </div>
+    <!-- Themes Page -->
+    <div class="themes" id="themes">
+        <h1>Themes</h1>
+        <h6>All it takes is one idea to solve an impossible problem.</h6>
+        <div class="owl-carousel owl-theme container">
+            <div class="item">
+                <div class="themeBox">
+                    <img src="./assets/images/whyRiverathon/theme-1.png" alt="">
+                    <h1>Floodplain Restoration</h1>
+                    <p>Using LiDAR to understand flood dynamics and propose strategies to restore natural floodplains.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="themeBox">
+                    <img src="./assets/images/whyRiverathon/theme-2.png" alt="">
+                    <h1>Sediment Management</h1>
+                    <p>Identifying sediment deposition and erosion patterns for effective riverbed and riverbank.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="themeBox">
+                    <img src="./assets/images/whyRiverathon/theme-3.png" alt="">
+                    <h1>Biodiversity Mapping</h1>
+                    <p>Leveraging LiDAR to analyze riparian zones and support biodiversity conservation initiatives.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="themeBox">
+                    <img src="./assets/images/whyRiverathon/theme-4.png" alt="">
+                    <h1>Disaster Management</h1>
+                    <p>Developing early warning systems for floods, landslides, and other river-related natural
+                        disasters.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="themeBox">
+                    <img src="./assets/images/whyRiverathon/theme-5.png" alt="">
+                    <h1>Riparian Zone/Vegetation Analysis</h1>
+                    <p>Analyze riparian vegetation dynamics, assess ecological health, and develop strategies for
+                        riparian zone restoration and management.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="themeBox">
+                    <img src="./assets/images/whyRiverathon/theme-6.png" alt="">
+                    <h1>River Neighborhood Infrastructure Mapping</h1>
+                    <p>Identify vulnerabilities in critical infrastructure, assess flood risks, and develop strategies.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="themeBox">
+                    <img src="./assets/images/whyRiverathon/theme-7.png" alt="">
+                    <h1>Digital Twin for Urban-River Interaction</h1>
+                    <p>Create virtual representations of urban-river systems to improve understanding and management.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="themeBox">
+                    <img src="./assets/images/whyRiverathon/theme-8.png" alt="">
+                    <h1>Climate and Environmental Monitoring</h1>
+                    <p>Track the impacts of climate change on river ecosystems and develop adaptation strategies.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="aboutPage" id="target-audience" style="margin-top:0px;">
+        <h1 class="whatRiverathon">
+            TARGET AUDIENCE
+        </h1>
+        <p class="whyRiverathon" id="why" style="text-align: justify;">
+            Riverathon welcomes participation from students, researchers, and innovators who are deeply committed to
+            environmental sustainability, technological innovation, and impactful problem-solving.
+            <br><br>
+            • Full-time undergraduate students enrolled in any discipline at recognized universities or institutions
+            across India.
+            <br>
+            • Full-time postgraduate students enrolled in any discipline at recognized universities or institutions
+            across India.
+            <br><br>
+            All applicants must be Indian nationals and are required to provide valid proof of nationality, such as an
+            Aadhaar card, Passport, Voter ID, or any other government-issued identification document.
+        </p>
+    </div>
+
+    <!-- Why Page-->
+    <div class="whyPage">
+        <h1 class="title">WHY RIVERATHON IS IMPORTANT FOR NATIONAL MISSION FOR CLEAN GANGA AND AMITY UNIVERSITY</h1>
+        <div class="gridWhyPerks">
+            <div class="perkBox">
+                <img loading="lazy" src="assets/images/whyRiverathon/why-1.png" alt="">
+                <h3>Cutting-Edge Research <br>
+                    & Innovation</h3>
+            </div>
+            <div class="perkBox">
+                <img loading="lazy" src="assets/images/whyRiverathon/why-2.png" alt="">
+                <h3>Skill Development <br>
+                    & Industry Collaboration</h3>
+            </div>
+            <div class="perkBox">
+                <img loading="lazy" src="assets/images/whyRiverathon/why-3.png" alt="">
+                <h3>Addressing Critical <br>
+                    Environmental Challenges</h3>
+            </div>
+        </div>
+    </div>
+    <!-- Organizers -->
+    <div class="organizerPage" id="organizer">
+        <div class="py-5 team4">
+            <div class="container">
+                <div class="row justify-content-center mb-4">
+                    <div class="col-md-7 text-center">
+                        <h1 class="mb-3">joint interface committee</h1>
+                        <h6 class="subtitle"></h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- column  -->
+                    <div class="col-lg-3 mb-4">
+                        <!-- Row -->
+                        <div class="row">
+                            <div class="col-md-12 orgImage">
+                                <img loading="lazy"
+                                    src="https://pbs.twimg.com/media/F_g_5rqagAARkZ5?format=jpg&name=medium"
+                                    alt="wrapkit" class="img-fluid rounded-circle" />
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <div class="pt-2">
+                                    <h5 style="font-weight: 900; color: rgb(0, 36, 73);" class="mt-4 mb-0">Chairman</h5>
+                                    <h6 style="font-weight: 400; color: #6c757d;" class="subtitle mb-3">Sh. Nalin
+                                        Srivastava,<br>Deputy Director General, NMCG</h6>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <!-- Row -->
+                    </div>
+                    <!-- column  -->
+                    <!-- column  -->
+
+                    <!-- column  -->
+                    <!-- column  -->
+                    <div class="col-lg-3 mb-4">
+                        <!-- Row -->
+                        <div class="row">
+                            <div class="col-md-12 orgImage">
+                                <img loading="lazy" src="https://pbs.twimg.com/media/FkEzzCnVQAAhLfE.jpg:large"
+                                    alt="wrapkit" class="img-fluid rounded-circle" />
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <div class="pt-2">
+                                    <h5 style="font-weight: 900; color: rgb(0, 36, 73);" class="mt-4 mb-0">Member</h5>
+                                    <h6 style="font-weight: 400; color: #6c757d; font-size: 0.9rem;"
+                                        class="subtitle mb-3">Sh. Dheeraj Joshi,<br> Director,<br> NMCG</h6>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Row -->
+                    </div>
+
+                    <!-- column  -->
+                    <!-- column  -->
+                    <div class="col-lg-3 mb-4">
+                        <!-- Row -->
+                        <div class="row">
+                            <div class="col-md-12 orgImage">
+                                <img loading="lazy" src="assets/images/organising-committee/neeraj.jpeg" alt="wrapkit"
+                                    class="img-fluid rounded-circle" />
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <div class="pt-2">
+                                    <h5 style="font-weight: 900; color: rgb(0, 36, 73);" class="mt-4 mb-0">Member</h5>
+                                    <h6 style="font-weight: 400; color: #6c757d; font-size: 0.9rem;"
+                                        class="subtitle mb-3">Sh. Neeraj Gurjar,<br>Director,<br>Geodetic & Research
+                                        Branch, Survey of India</h6>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Row -->
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <!-- Row -->
+                        <div class="row">
+                            <div class="col-md-12 orgImage">
+                                <img loading="lazy" src="assets/images/organising-committee/mathuria.jpg" alt="wrapkit"
+                                    class="img-fluid rounded-circle" />
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <div class="pt-2">
+                                    <h5 style="font-weight: 900; color: rgb(0, 36, 73);" class="mt-4 mb-0">Member</h5>
+                                    <h6 style="font-weight: 400; color: #6c757d;" class="subtitle mb-3">Sh. D. P.
+                                        Mathuria,<br> Chief Engineer,<br> P&DO, Central Water Commission</h6>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Row -->
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-3 mb-4">
+                        <!-- Row -->
+                        <div class="row">
+                            <div class="col-md-12 orgImage">
+                                <img loading="lazy" src="https://home.iitk.ac.in/~rsinha/img/R_Sinha.jpeg" alt="wrapkit"
+                                    class="img-fluid rounded-circle" />
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <div class="pt-2">
+                                    <h5 style="font-weight: 900; color: rgb(0, 36, 73);" class="mt-4 mb-0">Member</h5>
+                                    <h6 style="font-weight: 400; color: #6c757d; font-size: 0.9rem;"
+                                        class="subtitle mb-3">Prof. Rajiv Sinha,<br>Professor,<br> Department of Earth
+                                        Sciences, IIT Kanpur</h6>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Row -->
+                    </div>
+                    <!-- column  -->
+                    <div class="col-lg-3 mb-4">
+                        <!-- Row -->
+                        <div class="row">
+                            <div class="col-md-12 orgImage">
+                                <img loading="lazy" src="https://www.iirs.gov.in/iirs/sites/default/files/vabhav.jpg"
+                                    alt="wrapkit" class="img-fluid rounded-circle" />
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <div class="pt-2">
+                                    <h5 style="font-weight: 900; color: rgb(0, 36, 73);" class="mt-4 mb-0">Member</h5>
+                                    <h6 style="font-weight: 400; color: #6c757d; font-size: 0.9rem;"
+                                        class="subtitle mb-3">Dr. Vaibhav Garg,<br>Scientist F,<br> Water Resource
+                                        Department, Indian Institute of Remote Sensing/ISRO, Dehradun</h6>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Row -->
+                    </div>
+                    <!-- column  -->
+                    <!-- column  -->
+                    <div class="col-lg-3 mb-4">
+                        <!-- Row -->
+                        <div class="row">
+                            <div class="col-md-12 orgImage">
+                                <img loading="lazy"
+                                    src="https://iitbhu.ac.in/sites/default/files/styles/medium/public/pictures/2022-11/Anurag%20Ohri%20Photo.jpg?itok=O-7viWaJ"
+                                    alt="wrapkit" class="img-fluid rounded-circle" />
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <div class="pt-2">
+                                    <h5 style="font-weight: 900; color: rgb(0, 36, 73);" class="mt-4 mb-0">Member</h5>
+                                    <h6 style="font-weight: 400; color: #6c757d; font-size: 0.9rem;"
+                                        class="subtitle mb-3">Prof. Anurag Ohri,<br>Professor,<br>Department of Civil
+                                        Engineering, IIT (BHU)</h6>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Row -->
+                    </div>
+                    <!-- column  -->
+                    <!-- column  -->
+                    <div class="col-lg-3 mb-4">
+                        <!-- Row -->
+                        <div class="row">
+                            <div class="col-md-12 orgImage">
+                                <img loading="lazy"
+                                    src="https://hydrosense.iitd.ac.in/wp-content/uploads/Manab-scaled-e1685262459278-915x1024.jpg"
+                                    alt="wrapkit" class="img-fluid rounded-circle" />
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <div class="pt-2">
+                                    <h5 style="font-weight: 900; color: rgb(0, 36, 73);" class="mt-4 mb-0">Member</h5>
+                                    <h6 style="font-weight: 400; color: #6c757d; font-size: 0.9rem;"
+                                        class="subtitle mb-3">Assoc. Prof. Manabendra Saharia,<br>Associate
+                                        Professor,<br>Department of Civil Engineering, IIT Delhi</h6>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Row -->
+                    </div>
+                    <!-- column  -->
+                    <!-- column  -->
+                    <div class="col-lg-3 mb-4">
+                        <!-- Row -->
+                        <div class="row">
+                            <div class="col-md-12 orgImage">
+                                <img loading="lazy" src="https://jnu.irins.org/assets/profile_images/56643.jpg"
+                                    alt="wrapkit" class="img-fluid rounded-circle" />
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <div class="pt-2">
+                                    <h5 style="font-weight: 900; color: rgb(0, 36, 73);" class="mt-4 mb-0">Member</h5>
+                                    <h6 style="font-weight: 400; color: #6c757d; font-size: 0.9rem;"
+                                        class="subtitle mb-3">Prof. Saumitra Mukherjee,<br>Retd. Professor,<br> School
+                                        of Environmental Sciences, JNU / Director, New Environment and Energy Research
+                                        (NEER)</h6>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Row -->
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <!-- Row -->
+                        <div class="row">
+                            <div class="col-md-12 orgImage">
+                                <img loading="lazy"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgI7c5nAqiTx45eJp3cIUhzLdMEesti9gkCA&s"
+                                    alt="wrapkit" class="img-fluid rounded-circle" />
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <div class="pt-2">
+                                    <h5 style="font-weight: 900; color: rgb(0, 36, 73);" class="mt-4 mb-0">Member
+                                        Secretary</h5>
+                                    <h6 style="font-weight: 400; color: #6c757d; font-size: 0.9rem;"
+                                        class="subtitle mb-3">Sh. Peeyush Gupta,<br>RTIS,<r> NMCG</h6>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Row -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="organizerPage" id="organizer">
+        <div class="py-5 team4">
+            <div class="container">
+                <div class="row justify-content-center mb-4">
+                    <div class="col-md-7 text-center">
+                        <h1 class="mb-3">Organizing Committee</h1>
+                        <h6 class="subtitle"></h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 mb-4">
+                        <!-- Row -->
+                        <div class="row">
+                            <div class="col-md-12 orgImage">
+                                <img loading="lazy"
+                                    src="https://pbs.twimg.com/profile_images/1253001810912002048/9xNHe672_400x400.jpg"
+                                    alt="wrapkit" class="img-fluid rounded-circle" />
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <div class="pt-2">
+                                    <h5 style="font-weight: 900; color: rgb(0, 36, 73);" class="mt-4 mb-0">Member</h5>
+                                    <h6 style="font-weight: 400; color: #6c757d; font-size: 0.9rem;"
+                                        class="subtitle mb-3">Prof. Manoj Kr. Pandey,<br>Director,<br> Amity School of
+                                        Engineering and Technology, Noida</h6>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Row -->
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <!-- Row -->
+                        <div class="row">
+                            <div class="col-md-12 orgImage">
+                                <img loading="lazy"
+                                    src="https://img.amizone.net/AzureFileHandler.ashx?FileName=amizonefiles/facultyprofile/5101.jpeg"
+                                    alt="wrapkit" class="img-fluid rounded-circle" />
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <div class="pt-2">
+                                    <h5 style="font-weight: 900; color: rgb(0, 36, 73);" class="mt-4 mb-0">Member</h5>
+                                    <h6 style="font-weight: 400; color: #6c757d; font-size: 0.9rem;"
+                                        class="subtitle mb-3">Prof. Madhuri Kumari,<br>Professor,<br> Department of
+                                        Civil Engineering, Amity School of Engineering and Technology, Noida</h6>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Row -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p><strong>© 2025 Amity University. All rights reserved</strong></p>
+    </footer>
+</body>
+<!-- JavaScript Imports -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<script src="./assets/scripts/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+
+    $(document).ready(function () {
+
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            autoplay: true,
+            autoplayTimeout: 1000,
+            autoplayHoverPause: true,
+            responsiveClass: true,
+            margin: 10,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                750: {
+                    items: 2
+                },
+                1200: {
+                    items: 3
+                }
+            }
+        })
+        $(".owl-prev").html('<i class="fa fa-chevron-left"></i>');
+        $(".owl-next").html('<i class="fa fa-chevron-right"></i>');
+
+    });
+</script>
+
+</html>
